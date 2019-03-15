@@ -76,6 +76,6 @@ int main() {
 
 	printf("Найдено: %d человек", count);
 
-
+	delete[] Persons;
 	return 0;
 }
