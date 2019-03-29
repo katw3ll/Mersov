@@ -41,7 +41,7 @@ int main() {
 	//Ввод элементов
 	for (i = 0; i < size; i++)
 	{
-		EL = new el;
+		EL = (struct el*)malloc(sizeof(struct el));
 		EL->pred = NULL;
 		EL->post = NULL;
 		printf("\t%d: ",i+1);
@@ -97,7 +97,7 @@ int main() {
 
 			size--;
 			printf("\n-> Элемент %g удален\n", EL->ELEM);
-			delete EL;
+			free(EL);
 			break;
 		}
 		if (EL->post != NULL)
